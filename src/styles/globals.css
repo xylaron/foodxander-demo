@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+  @apply bg-neutral-900;
+  @apply text-white;
+}
+
+span {
+  @apply text-pink-600;
+}
