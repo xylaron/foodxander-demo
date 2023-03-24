@@ -16,4 +16,7 @@ export const ordersRouter = createTRPCRouter({
         },
       });
     }),
+  get: publicProcedure.query(async ({ ctx }) => {
+    return await ctx.prisma.orders.findMany();
+  }),
 });

@@ -6,6 +6,7 @@ import MinusIcon from "components/MinusIcon";
 import PlusIcon from "components/PlusIcon";
 import { useState } from "react";
 import { api } from "utils/api";
+import { Order } from "types/types";
 
 const Checkout: NextPage = () => {
   const router = useRouter();
@@ -28,41 +29,13 @@ const Checkout: NextPage = () => {
     },
   });
 
-  interface OrderItem {
-    id: number;
-    name: string;
-    price: number;
-    quantity: number;
-  }
-
-  interface Order {
-    date: Date;
-    description: string;
-    status: string;
-    paymentAmount: number;
-    paymentMethod: string;
-    paymentStatus: string;
-    restaurant: {
-      id: number;
-      name: string;
-      address: string;
-      phone: string;
-    };
-    items: OrderItem[];
-  }
-
   const handleSubmit = () => {
     const orderJson: Order = {
-      date: new Date(),
+      date: new Date().toLocaleString("en-UK", {
+        timeZone: "Asia/Hong_Kong",
+      }),
       description: "Order from Example User",
-      status: "pending",
-      paymentAmount:
-        brownSugarBobaFreshMilk * 37 +
-        cheeseMango * 37 +
-        peachWithFourSeasonsTea * 37 +
-        pineappleWithJasmineTea * 37,
-      paymentMethod: "cash",
-      paymentStatus: "pending",
+      status: "Pending",
       restaurant: {
         id: 1,
         name: "E Tea",
