@@ -205,6 +205,13 @@ const Checkout: NextPage = () => {
               </div>
             </div>
           </div>
+          <div className="text-2xl font-bold">
+            Order Total: HKD${" "}
+            {brownSugarBobaFreshMilk * 37 +
+              cheeseMango * 37 +
+              peachWithFourSeasonsTea * 37 +
+              pineappleWithJasmineTea * 37}
+          </div>
           <div className="flex flex-row items-center justify-center gap-4">
             <button
               className="inline-flex h-10 items-center justify-center rounded-md bg-pink-700 px-4 py-2 font-medium text-white transition-colors hover:bg-pink-800 focus:outline-none active:scale-95 active:bg-pink-900 disabled:pointer-events-none disabled:opacity-50"
