@@ -1,0 +1,31 @@
+{
+  "orderData": {
+    "date": "2023-03-24T15:26:58.100Z",
+    "description": "Order from Example User",
+    "status": "pending",
+    "paymentAmount": 222,
+    "paymentMethod": "cash",
+    "paymentStatus": "pending",
+    "restaurant": {
+      "id": 1,
+      "name": "E Tea",
+      "address": "Example Address",
+      "phone": "12345678"
+    },
+    "items": [
+      {
+        "id": 1,
+        "name": "Brown Sugar Boba Fresh Milk",
+        "price": 37,
+        "quantity": 1
+      },
+      { "id": 2, "name": "Cheese Mango", "price": 37, "quantity": 2 },
+      {
+        "id": 4,
+        "name": "Pineapple with Jasmine Tea",
+        "price": 37,
+        "quantity": 3
+      }
+    ]
+  }
+}
