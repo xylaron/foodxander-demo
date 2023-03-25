@@ -4,8 +4,12 @@ import { api } from "utils/api";
 
 import "styles/globals.css";
 import { Toaster } from "react-hot-toast";
+import { useState } from "react";
+import Login from "components/Login";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
     <>
       <Head>
@@ -15,8 +19,14 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         />
         <title>foodXander</title>
       </Head>
-      <Toaster />
-      <Component {...pageProps} />
+      {isAuthenticated ? (
+        <div className="">
+          <Toaster />
+          <Component {...pageProps} />
+        </div>
+      ) : (
+        <Login setIsAuthenticated={setIsAuthenticated} />
+      )}
     </>
   );
 };
