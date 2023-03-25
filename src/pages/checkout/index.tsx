@@ -2,8 +2,6 @@ import { type NextPage } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import toast from "react-hot-toast";
-import MinusIcon from "components/MinusIcon";
-import PlusIcon from "components/PlusIcon";
 import { useState } from "react";
 import { api } from "utils/api";
 import { Order } from "types/types";
