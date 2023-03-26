@@ -33,6 +33,7 @@ const RestaurantHome: NextPage = () => {
       description: parsedOrderData.description,
       status: "Delivered",
       restaurant: parsedOrderData.restaurant,
+      user: parsedOrderData.user,
       items: parsedOrderData.items,
     };
     editOrder.mutate({ id, orderData: JSON.stringify(orderJson) });

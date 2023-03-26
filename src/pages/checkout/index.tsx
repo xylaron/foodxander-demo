@@ -40,6 +40,12 @@ const Checkout: NextPage = () => {
         address: "Example Address",
         phone: "12345678",
       },
+      user: {
+        id: 1,
+        name: "Example User",
+        address: "Example Address",
+        phone: "12345678",
+      },
       items: [],
     };
 

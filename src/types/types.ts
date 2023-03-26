@@ -8,6 +8,12 @@ export interface Order {
     address: string;
     phone: string;
   };
+  user: {
+    id: number;
+    name: string;
+    address: string;
+    phone: string;
+  };
   items: Item[];
 }
 
